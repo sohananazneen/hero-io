@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "title": "Subway Surfers",
+    "companyName": "SYBO Games",
+    "image": "https://play-lh.googleusercontent.com/TByS9vZp1v0K9y6n4z_SgZzLpL9v0V_4_Z9_9_Z9_9_Z9_9_Z9_9_Z9_9_Z9_9_Z9_9_Z9",
+    "description": "Dodge the trains! Help Jake, Tricky & Fresh escape from the grumpy Inspector and his dog.",
+    "size": 185.2,
+    "reviews": 35000000,
+    "ratingAvg": 4.6,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 1200000 },
+      { "name": "2 star", "count": 800000 },
+      { "name": "3 star", "count": 1500000 },
+      { "name": "4 star", "count": 4500000 },
+      { "name": "5 star", "count": 27000000 }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "WhatsApp Messenger",
+    "companyName": "Meta Platforms, Inc.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+    "description": "Simple. Reliable. Private. WhatsApp from Meta is a FREE messaging and video calling app.",
+    "size": 48.5,
+    "reviews": 175000000,
+    "ratingAvg": 4.3,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 15000000 },
+      { "name": "2 star", "count": 5000000 },
+      { "name": "3 star", "count": 10000000 },
+      { "name": "4 star", "count": 25000000 },
+      { "name": "5 star", "count": 120000000 }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Minecraft",
+    "companyName": "Mojang",
+    "image": "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png",
+    "description": "Explore infinite worlds and build everything from the simplest of homes to the grandest of castles.",
+    "size": 650.0,
+    "reviews": 4800000,
+    "ratingAvg": 4.6,
+    "downloads": 50000000,
+    "ratings": [
+      { "name": "1 star", "count": 200000 },
+      { "name": "2 star", "count": 100000 },
+      { "name": "3 star", "count": 300000 },
+      { "name": "4 star", "count": 700000 },
+      { "name": "5 star", "count": 3500000 }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "PUBG MOBILE",
+    "companyName": "Level Infinite",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/a2/PUBG_Mobile_Logo.png",
+    "description": "The original Battle Royale, now on mobile. Extreme battles in 10-minute matches.",
+    "size": 1900.0,
+    "reviews": 45000000,
+    "ratingAvg": 4.2,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 5000000 },
+      { "name": "2 star", "count": 2000000 },
+      { "name": "3 star", "count": 4000000 },
+      { "name": "4 star", "count": 9000000 },
+      { "name": "5 star", "count": 25000000 }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "TikTok",
+    "companyName": "TikTok Ltd.",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg",
+    "description": "TikTok is THE destination for mobile videos. On TikTok, short-form videos are exciting, spontaneous, and genuine.",
+    "size": 95.4,
+    "reviews": 60000000,
+    "ratingAvg": 4.4,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 4000000 },
+      { "name": "2 star", "count": 2000000 },
+      { "name": "3 star", "count": 5000000 },
+      { "name": "4 star", "count": 12000000 },
+      { "name": "5 star", "count": 37000000 }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "CapCut - Video Editor",
+    "companyName": "Bytedance Pte. Ltd.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/CapCut_logo.svg",
+    "description": "Easy-to-use video editor with high-quality filters, effects, and trending music.",
+    "size": 132.0,
+    "reviews": 8500000,
+    "ratingAvg": 4.5,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 400000 },
+      { "name": "2 star", "count": 200000 },
+      { "name": "3 star", "count": 600000 },
+      { "name": "4 star", "count": 1500000 },
+      { "name": "5 star", "count": 5800000 }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Truecaller",
+    "companyName": "Truecaller",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/23/Truecaller_logo.svg",
+    "description": "Identify unknown calls, block spam SMS and telemarketers with the world’s best Caller ID.",
+    "size": 62.8,
+    "reviews": 20000000,
+    "ratingAvg": 4.4,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 1500000 },
+      { "name": "2 star", "count": 500000 },
+      { "name": "3 star", "count": 1000000 },
+      { "name": "4 star", "count": 3000000 },
+      { "name": "5 star", "count": 14000000 }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Roblox",
+    "companyName": "Roblox Corporation",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon.svg",
+    "description": "Roblox is the ultimate virtual universe that lets you create, share experiences with friends, and be anything you can imagine.",
+    "size": 155.5,
+    "reviews": 32000000,
+    "ratingAvg": 4.4,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 3000000 },
+      { "name": "2 star", "count": 1000000 },
+      { "name": "3 star", "count": 2000000 },
+      { "name": "4 star", "count": 5000000 },
+      { "name": "5 star", "count": 21000000 }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Free Fire",
+    "companyName": "Garena International",
+    "image": "https://upload.wikimedia.org/wikipedia/en/b/b5/Garena_Free_Fire_logo.png",
+    "description": "Survival shooter game where you are placed on a remote island against 49 other players.",
+    "size": 1500.0,
+    "reviews": 115000000,
+    "ratingAvg": 4.1,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 18000000 },
+      { "name": "2 star", "count": 7000000 },
+      { "name": "3 star", "count": 10000000 },
+      { "name": "4 star", "count": 15000000 },
+      { "name": "5 star", "count": 65000000 }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Netflix",
+    "companyName": "Netflix, Inc.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+    "description": "Watch TV shows and movies recommended just for you, including award-winning Netflix original series, movies, and documentaries.",
+    "size": 55.0,
+    "reviews": 15000000,
+    "ratingAvg": 4.0,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 2000000 },
+      { "name": "2 star", "count": 1000000 },
+      { "name": "3 star", "count": 2000000 },
+      { "name": "4 star", "count": 3000000 },
+      { "name": "5 star", "count": 7000000 }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Telegram",
+    "companyName": "Telegram FZ-LLC",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg",
+    "description": "Pure instant messaging — simple, fast, secure, and synced across all your devices.",
+    "size": 65.2,
+    "reviews": 12000000,
+    "ratingAvg": 4.5,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 600000 },
+      { "name": "2 star", "count": 300000 },
+      { "name": "3 star", "count": 800000 },
+      { "name": "4 star", "count": 1800000 },
+      { "name": "5 star", "count": 8500000 }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Candy Crush Saga",
+    "companyName": "King",
+    "image": "https://upload.wikimedia.org/wikipedia/en/b/b5/Candy_Crush_Saga_logo.png",
+    "description": "Start playing Candy Crush Saga today – a legendary puzzle game loved by millions of players around the world.",
+    "size": 92.4,
+    "reviews": 38000000,
+    "ratingAvg": 4.6,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 1500000 },
+      { "name": "2 star", "count": 900000 },
+      { "name": "3 star", "count": 1800000 },
+      { "name": "4 star", "count": 4800000 },
+      { "name": "5 star", "count": 29000000 }
+    ]
+  }
+]

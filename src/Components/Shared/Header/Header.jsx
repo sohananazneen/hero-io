@@ -1,4 +1,15 @@
 import React from "react";
+import { Link } from "react-router";
+import logo from "../../../assets/logo.png";
+import gitLogo from "../../../assets/fi_2111432.svg";
+
+const Links = (
+  <>
+    <Link to={"/"}>Home</Link>
+    <Link to={"/apps"}>Apps</Link>
+    <Link to={"/installation"}>Installation</Link>
+  </>
+);
 
 const Header = () => {
   return (
@@ -27,52 +38,28 @@ const Header = () => {
               tabIndex="-1"
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+              {Links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link to={"/"} className="btn btn-ghost text-xl text-purple-600">
+            <img src={logo} className="w-10 h-10 object-contain " alt="Logo" />
+            HERO.IO
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2 bg-base-100 w-40 z-1">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+          <ul className="menu menu-horizontal px-1 space-x-2.5 cursor-pointer [&_a]:hover:text-purple-600 [&_a]:hover:underline font-bold">
+            {Links}
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a
+            href="https://github.com/sohananazneen"
+            target="_blank"
+            className="btn bg-purple-600 text-white"
+          >
+            <img src={gitLogo} alt="Git Link" />
+            Contribution
+          </a>
         </div>
       </div>
     </>
