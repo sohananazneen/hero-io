@@ -7,7 +7,7 @@ const States = () => {
         Trusted by Millions, Built for You
       </h1>
 
-      <div className="stats stats-vertical lg:stats-horizontal  text-white  w-full max-w-4xl">
+      <div className="stats stats-vertical lg:stats-horizontal text-white w-full">
         <div className="stat place-items-center py-6">
           <div className="stat-title text-white/70">Total Downloads</div>
           <div className="stat-value text-white font-extrabold text-5xl my-5">

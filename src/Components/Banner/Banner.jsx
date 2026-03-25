@@ -6,12 +6,12 @@ import ilogo from "../../assets/fi_5977575.svg";
 const Banner = () => {
   return (
     <>
-      <div className="hero bg-base-200 min-h-screen">
+      <div className="hero bg-base-200 min-h-screen pt-10">
         <div className="hero-content text-center">
           <div className="max-w-5xl flex flex-col items-center">
-            <h1 className="text-5xl font-black font-inter">We Build</h1>
-            <h1 className="text-5xl font-black font-inter">
-              <span className="text-primary">Productive</span> Apps
+            <h1 className="text-6xl font-bold font-inter ">We Build</h1>
+            <h1 className="text-6xl font-bold font-inter my-2">
+              <span className="text-primary font-black">Productive</span> Apps
             </h1>
             <p className="py-6 text-lg text-gray-500">
               At HERO.IO, we craft innovative apps designed to make everyday
@@ -21,14 +21,14 @@ const Banner = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-10 w-full justify-center">
               <a
                 href="https://play.google.com/"
-                className="btn btn-outline hover:bg-primary px-8 py-6"
+                className="btn btn-outline border-gray-300  hover:bg-blue-100 px-8 py-6"
                 target="_blank"
               >
                 <img src={glogo} alt="" /> Google Play
               </a>
               <a
                 href="https://www.apple.com/app-store/"
-                className="btn btn-outline hover:bg-primary px-8 py-6"
+                className="btn btn-outline border-gray-300 hover:bg-blue-100 px-8 py-6"
                 target="_blank"
               >
                 <img src={ilogo} alt="" /> App Store

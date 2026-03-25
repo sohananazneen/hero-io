@@ -55,7 +55,7 @@ const Header = () => {
           <a
             href="https://github.com/sohananazneen"
             target="_blank"
-            className="btn bg-purple-600 text-white"
+            className="btn bg-purple-600 text-white py-5"
           >
             <img src={gitLogo} alt="Git Link" />
             Contribution
