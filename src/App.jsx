@@ -1,10 +1,12 @@
 import Banner from "./Components/Banner/Banner";
+import States from "./Components/States/States";
 
 function App() {
   return (
-    <div className="px-6 space-y-10 my-10">
+    <>
       <Banner />
-    </div>
+      <States />
+    </>
   );
 }
 
