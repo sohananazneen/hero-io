@@ -14,7 +14,7 @@ const router = createBrowserRouter([
       {
         index: true,
         loader: async () => {
-          const res = await axios.get("/public/data.json");
+          const res = await axios.get("/data.json");
           return res.data;
         },
         element: <App />,
