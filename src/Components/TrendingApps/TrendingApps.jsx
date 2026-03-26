@@ -1,9 +1,10 @@
 import React from "react";
 import { LuDownload } from "react-icons/lu";
 import { FaStar } from "react-icons/fa6";
+import { Link } from "react-router";
 
 const TrendingApps = ({ TrendingProducts }) => {
-  console.log(TrendingProducts);
+  // console.log(TrendingProducts);
   return (
     <div className="mx-auto text-center m-5 p-10">
       <h1 className="text-4xl font-bold">Trending Apps</h1>
@@ -23,7 +24,7 @@ const TrendingApps = ({ TrendingProducts }) => {
                 alt={tProduct.title}
                 referrerPolicy="no-referrer"
                 loading="lazy"
-                className="w-1/2 md:w-1/3 lg:w-40 object-contain rounded-2xl"
+                className="size-full object-cover object-top rounded-2xl hover:scale-105 transition-all duration-500"
               />
             </figure>
             <div className="card-body">
@@ -42,13 +43,12 @@ const TrendingApps = ({ TrendingProducts }) => {
           </div>
         ))}
       </div>
-      <a
-        href=""
-        target="_blank"
+      <Link
+        to={"/apps"}
         className="btn bg-purple-600 text-white py-5 px-8 mt-10"
       >
         Show All
-      </a>
+      </Link>
     </div>
   );
 };

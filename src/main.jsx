@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Layout from "./Layout/Layout.jsx";
 import axios from "axios";
+import AppsPage from "./Components/AppsPage/AppsPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,14 @@ const router = createBrowserRouter([
           return res.data;
         },
         element: <App />,
+      },
+      {
+        path: "/apps",
+        loader: async () => {
+          const res = await axios.get("/data.json");
+          return res.data;
+        },
+        element: <AppsPage />,
       },
     ],
   },
