@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Components/Shared/Header/Header";
 import Footer from "../Components/Shared/Footer/Footer";
 import { Outlet, useNavigation } from "react-router";
@@ -6,6 +6,16 @@ import { Outlet, useNavigation } from "react-router";
 const Layout = () => {
   const navigation = useNavigation();
   const isLoading = navigation.state === "loading";
+
+  const [installedApps, setInstalledApps] = useState([]);
+
+  const handleInstall = (app) => {
+    setInstalledApps((prev) => {
+      if (prev.find((item) => item.id === app.id)) return prev;
+      return [...prev, app];
+    });
+  };
+
   return (
     <div>
       <Header />
@@ -21,7 +31,7 @@ const Layout = () => {
       )}
 
       <main className={isLoading ? "blur-sm pointer-events-none" : ""}>
-        <Outlet />
+        <Outlet context={{ installedApps, handleInstall }} />
       </main>
       <Footer />
     </div>

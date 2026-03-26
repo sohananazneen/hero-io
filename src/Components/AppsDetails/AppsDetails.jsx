@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useLoaderData } from "react-router";
+import { useLoaderData, useOutletContext } from "react-router";
 import AppError from "../ErrorPages/AppError";
 import downloadImage from "../../assets/icon-downloads.png";
 import startImage from "../../assets/icon-ratings.png";
@@ -9,11 +8,13 @@ import AppReviewChart from "./AppReviewChart";
 
 const AppsDetails = () => {
   const appsData = useLoaderData();
-  const [isInstalled, setIsInstalled] = useState(false);
+  const { handleInstall, installedApps } = useOutletContext();
 
-  const handleInstall = () => {
-    setIsInstalled(true);
-    toast("Installed Successfully");
+  const isInstalled = installedApps.some((app) => app.id === appsData?.id);
+
+  const onInstallClick = () => {
+    handleInstall(appsData);
+    toast.success("Installed Successfully");
   };
 
   if (!appsData) {
@@ -66,7 +67,7 @@ const AppsDetails = () => {
             </div>
           </div>
           <button
-            onClick={handleInstall}
+            onClick={onInstallClick}
             disabled={isInstalled}
             className={`btn btn-lg mt-8 w-full md:w-auto px-10 transition-all ${
               isInstalled
