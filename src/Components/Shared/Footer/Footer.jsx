@@ -1,12 +1,16 @@
 import React from "react";
 import logo from "../../../assets/logo.png";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
     <>
       <footer className="footer sm:footer-horizontal bg-blue-950 text-neutral-content items-center p-4">
         <aside className="grid-flow-col items-center">
-          <img src={logo} className="w-10 h-10 object-contain" alt="Logo" />
+          <Link to={"/"} className="btn btn-ghost text-xl">
+            <img src={logo} className="w-10 h-10 object-contain " alt="Logo" />
+            HERO.IO
+          </Link>
 
           <p>HERO.IO</p>
         </aside>
