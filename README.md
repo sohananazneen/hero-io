@@ -20,8 +20,8 @@ Smart Loading: Integrated React Router navigation states for smooth page transit
 
 ## 🛠️ Technologies Used
 
-Frontend Core
-React.js: Library for building the component-based user interface.
+* Frontend Core
+* React.js: Library for building the component-based user interface.
 
 React Router: For declarative routing and data loading.
 
