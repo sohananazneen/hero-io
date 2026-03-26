@@ -5,6 +5,7 @@ import downloadImage from "../../assets/icon-downloads.png";
 import startImage from "../../assets/icon-ratings.png";
 import reviewsImage from "../../assets/icon-review.png";
 import { toast } from "react-toastify";
+import AppReviewChart from "./AppReviewChart";
 
 const AppsDetails = () => {
   const appsData = useLoaderData();
@@ -77,6 +78,7 @@ const AppsDetails = () => {
           </button>
         </div>
       </div>
+      <AppReviewChart />
       <div className="py-4 mt-6">
         <h4 className="font-bold text-2xl mb-4">Description</h4>
         <p className="text-gray-600 text-lg whitespace-pre-line">
