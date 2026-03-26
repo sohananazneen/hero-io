@@ -1,13 +1,34 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import logo from "../../../assets/logo.png";
 import gitLogo from "../../../assets/fi_2111432.svg";
 
 const Links = (
   <>
-    <Link to={"/"}>Home</Link>
-    <Link to={"/apps"}>Apps</Link>
-    <Link to={"/installation"}>Installation</Link>
+    <NavLink
+      to={"/"}
+      className={({ isActive }) =>
+        isActive ? "text-purple-600 font-bold underline" : "text-gray-600"
+      }
+    >
+      Home
+    </NavLink>
+    <NavLink
+      to={"/apps"}
+      className={({ isActive }) =>
+        isActive ? "text-purple-600 font-bold underline" : "text-gray-600"
+      }
+    >
+      Apps
+    </NavLink>
+    <NavLink
+      to={"/installation"}
+      className={({ isActive }) =>
+        isActive ? "text-purple-600 font-bold underline" : "text-gray-600"
+      }
+    >
+      Installation
+    </NavLink>
   </>
 );
 
