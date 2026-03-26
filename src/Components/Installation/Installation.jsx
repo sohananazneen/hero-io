@@ -3,7 +3,7 @@ import React from "react";
 const Installation = () => {
   return (
     <div>
-      <h1>Installation Page</h1>
+      <h1>My Installation</h1>
     </div>
   );
 };
