@@ -8,35 +8,38 @@ Hero IO is a curated app directory designed for developers and users alike. It a
 
 ## Key Features:
 
-Dynamic App Directory: Explore a full catalog of applications with detailed descriptions.
+- Dynamic App Directory: Explore a full catalog of applications with detailed descriptions.
 
-Real-time Search: Instant filtering of applications with a custom logo-spin loading animation.
+- Real-time Search: Instant filtering of applications with a custom logo-spin loading animation.
 
-Data Visualization: Interactive "Ratings Distribution" charts showing 1 to 5-star review data.
+- Data Visualization: Interactive "Ratings Distribution" charts showing 1 to 5-star review data.
 
-Responsive Design: Fully optimized for Mobile, Tablet, and Desktop using Tailwind CSS and DaisyUI.
+- Responsive Design: Fully optimized for Mobile, Tablet, and Desktop using Tailwind CSS and DaisyUI.
 
-Smart Loading: Integrated React Router navigation states for smooth page transitions.
+- Smart Loading: Integrated React Router navigation states for smooth page transitions.
 
 ## 🛠️ Technologies Used
 
-* Frontend Core
-* React.js: Library for building the component-based user interface.
+### Frontend Core
 
-React Router: For declarative routing and data loading.
+- React.js: Library for building the component-based user interface.
 
-Tailwind CSS: Utility-first CSS framework for rapid UI development.
+- React Router: For declarative routing and data loading.
 
-DaisyUI: High-quality component classes for Tailwind CSS.
+- Tailwind CSS: Utility-first CSS framework for rapid UI development.
 
-Data & Visualization
-Recharts: A composable charting library built on React components.
+- DaisyUI: High-quality component classes for Tailwind CSS.
 
-JSON: Local data structure for managing app metadata and reviews.
+### Data & Visualization
 
-Development Tools
-Vite: Next-generation frontend tooling for a fast development cycle.
+- Recharts: A composable charting library built on React components.
 
-React Icon: For clean and consistent icons.
+- JSON: Local data structure for managing app metadata and reviews.
+
+## Development Tools
+
+- Vite: Next-generation frontend tooling for a fast development cycle.
+
+- React Icon: For clean and consistent icons.
 
 # Live Link : https://hero-io-liart.vercel.app/
