@@ -1,13 +1,26 @@
 import React from "react";
 import Header from "../Components/Shared/Header/Header";
 import Footer from "../Components/Shared/Footer/Footer";
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
 
 const Layout = () => {
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading";
   return (
-    <div className="flex flex-col min-h-screen">
+    <div>
       <Header />
-      <main className="flex-grow">
+      {isLoading && (
+        <div className="flex flex-col items-center justify-center">
+          <img
+            src="/logo.png"
+            alt="Loading..."
+            className="w-20 h-20 animate-spin-slow"
+            style={{ animation: "spin 2s linear infinite" }}
+          />
+        </div>
+      )}
+
+      <main className={isLoading ? "blur-sm pointer-events-none" : ""}>
         <Outlet />
       </main>
       <Footer />
