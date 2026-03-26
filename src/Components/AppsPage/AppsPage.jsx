@@ -1,50 +1,48 @@
-import React from "react";
-import { Link, useLoaderData } from "react-router";
-import { LuDownload } from "react-icons/lu";
-import { FaStar } from "react-icons/fa6";
+import React, { useState } from "react";
+import { useLoaderData } from "react-router";
 import AppsCard from "./AppsCard";
+import AppError from "../ErrorPages/AppError";
 
 const AppsPage = () => {
   const allApps = useLoaderData();
-  //   console.log(allApps);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredApps = allApps.filter((app) =>
+    app.title.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
+
   return (
-    <div className="mx-auto text-center m-5 p-10 bg-base-200">
+    <div className="mx-auto text-center m-5 p-10 bg-base-200 min-h-screen">
       <h1 className="text-4xl font-bold">Our All Applications</h1>
       <p className="text-gray-400 my-4">
-        Explore All Apps on the Market developed by us. We code for Millions
+        Explore All Apps on the Market developed by us. We code for Millions.
       </p>
+
       <div className="flex flex-col md:flex-row justify-between items-center p-4 mb-8 gap-4">
         <div className="text-left w-full md:w-auto">
-          <p className="font-bold">({allApps.length}) Apps Found</p>
+          <p className="font-bold text-lg">
+            ({filteredApps.length}) Apps Found
+          </p>
         </div>
-        <div className="form-control w-full md:w-72">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search Apps"
-              className="input input-bordered w-full pl-10 focus:input-primary transition-all"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </div>
+        <div className="form-control w-full md:w-80">
+          <input
+            type="text"
+            placeholder="Search by title..."
+            className="input input-bordered w-full focus:input-primary"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        {allApps.map((allApp) => (
-          <AppsCard {...allApp} key={allApp.id} />
-        ))}
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {filteredApps.length > 0 ? (
+          filteredApps.map((app) => <AppsCard {...app} key={app.id} />)
+        ) : (
+          <div className="col-span-full flex justify-center items-center w-full">
+            <AppError />
+          </div>
+        )}
       </div>
     </div>
   );
