@@ -7,6 +7,7 @@ import Layout from "./Layout/Layout.jsx";
 import axios from "axios";
 import AppsPage from "./Components/AppsPage/AppsPage.jsx";
 import AppsDetails from "./Components/AppsDetails/AppsDetails.jsx";
+import NotFound from "./Components/ErrorPages/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
           // console.log(singleAppData);
         },
         element: <AppsDetails />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },
