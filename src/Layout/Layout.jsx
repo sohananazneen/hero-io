@@ -13,10 +13,10 @@ const Layout = () => {
         <div className="flex flex-col items-center justify-center">
           <img
             src="/logo.png"
-            alt="Loading..."
-            className="w-20 h-20 animate-spin-slow"
-            style={{ animation: "spin 2s linear infinite" }}
+            className="w-16 h-16 animate-spin"
+            alt="Loading"
           />
+          <p className="mt-4 text-gray-500">Loading...</p>
         </div>
       )}
 
