@@ -9,6 +9,7 @@ import AppsPage from "./Components/AppsPage/AppsPage.jsx";
 import AppsDetails from "./Components/AppsDetails/AppsDetails.jsx";
 import NotFound from "./Components/ErrorPages/NotFound.jsx";
 import { ToastContainer } from "react-toastify";
+import Installation from "./Components/Installation/Installation.jsx";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,14 @@ const router = createBrowserRouter([
           // console.log(singleAppData);
         },
         element: <AppsDetails />,
+      },
+      {
+        path: "/installation",
+        loader: async () => {
+          const res = await axios.get("/data.json");
+          return res.data;
+        },
+        element: <Installation />,
       },
       {
         path: "*",
