@@ -1,50 +1,72 @@
 import React from "react";
-import { useLoaderData, Link } from "react-router";
+import { useLoaderData } from "react-router";
 import AppError from "../ErrorPages/AppError";
+import downloadImage from "../../assets/icon-downloads.png";
+import startImage from "../../assets/icon-ratings.png";
+import reviewsImage from "../../assets/icon-review.png";
 
 const AppsDetails = () => {
-  const app = useLoaderData();
+  const appsData = useLoaderData();
 
-  if (!app) {
+  if (!appsData) {
     return <AppError />;
   }
-
+  const {
+    image,
+    title,
+    companyName,
+    downloads,
+    ratingAvg,
+    description,
+    size,
+    reviews,
+  } = appsData;
   return (
-    <div className="max-w-4xl mx-auto p-6 lg:p-10">
-      <Link to="/apps" className="btn btn-ghost mb-6">
-        ← Back to Apps
-      </Link>
-
+    <div className="mx-auto p-6 lg:p-10">
       <div className="flex flex-col md:flex-row gap-8 items-start">
-        <div className="w-full md:w-1/3">
-          <img
-            src={app.image}
-            alt={app.title}
-            className="rounded-3xl shadow-2xl w-full object-cover aspect-square"
-          />
+        <div className="w-full md:w-1/4 shadow-sm">
+          <img src={image} alt={title} className="p-8 w-full object-cover" />
         </div>
 
         <div className="flex-1 text-left">
-          <h1 className="text-5xl font-extrabold mb-2">{app.title}</h1>
-          <div className="flex gap-4 mb-6">
-            <span className="badge badge-success gap-2 p-4 font-bold text-white">
-              ⭐ {app.ratingAvg} Rating
-            </span>
-            <span className="badge badge-ghost gap-2 p-4 font-bold">
-              ⬇️ {app.downloads} Downloads
-            </span>
+          <div className="border-b border-gray-200">
+            <h1 className="text-5xl font-extrabold">{title}</h1>
+            <p className="py-2">
+              Developed by
+              <span className="text-purple-600 font-bold"> {companyName}</span>
+            </p>
           </div>
+          <div>
+            <div className="stats gap-6">
+              <div className="stat border-none">
+                <img src={downloadImage} alt="" />
+                <div className="stat-title my-2">Downloads</div>
+                <div className="stat-value">{downloads}</div>
+              </div>
 
-          <h3 className="text-xl font-bold mb-2">About this App</h3>
-          <p className="text-gray-600 leading-relaxed text-lg">
-            {app.description ||
-              "No description provided for this application yet."}
-          </p>
+              <div className="stat border-none">
+                <img src={startImage} alt="" />
+                <div className="stat-title my-2">Average Ratings</div>
+                <div className="stat-value">{ratingAvg}</div>
+              </div>
 
-          <button className="btn btn-primary btn-lg mt-8 w-full md:w-auto px-10">
-            Insatll Now
+              <div className="stat border-none">
+                <img src={reviewsImage} alt="" />
+                <div className="stat-title my-2">Total Reviews</div>
+                <div className="stat-value">{reviews}</div>
+              </div>
+            </div>
+          </div>
+          <button className="btn btn-success text-white btn-lg w-full md:w-auto px-10">
+            Insatll Now ({size})
           </button>
         </div>
+      </div>
+      <div className="py-4 mt-6">
+        <h4 className="font-bold text-2xl mb-4">Description</h4>
+        <p className="text-gray-600 text-lg whitespace-pre-line">
+          {description || "No description provided for this application yet."}
+        </p>
       </div>
     </div>
   );
