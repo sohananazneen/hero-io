@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Layout from "./Layout/Layout.jsx";
 import axios from "axios";
 import AppsPage from "./Components/AppsPage/AppsPage.jsx";
+import AppsDetails from "./Components/AppsDetails/AppsDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,18 @@ const router = createBrowserRouter([
           return res.data;
         },
         element: <AppsPage />,
+      },
+      {
+        path: "/appsdetails/:id",
+        loader: async ({ params }) => {
+          const res = await axios.get("/data.json");
+          const singleAppData = res.data.find(
+            (singleApp) => singleApp.id === Number(params.id),
+          );
+          return singleAppData;
+          // console.log(singleAppData);
+        },
+        element: <AppsDetails />,
       },
     ],
   },
