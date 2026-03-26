@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router";
 import AppError from "../ErrorPages/AppError";
 import downloadImage from "../../assets/icon-downloads.png";
 import startImage from "../../assets/icon-ratings.png";
 import reviewsImage from "../../assets/icon-review.png";
+import { toast } from "react-toastify";
 
 const AppsDetails = () => {
   const appsData = useLoaderData();
+  const [isInstalled, setIsInstalled] = useState(false);
+
+  const handleInstall = () => {
+    setIsInstalled(true);
+    toast("Installed Successfully");
+  };
 
   if (!appsData) {
     return <AppError />;
@@ -57,8 +64,16 @@ const AppsDetails = () => {
               </div>
             </div>
           </div>
-          <button className="btn btn-success text-white btn-lg w-full md:w-auto px-10">
-            Insatll Now ({size})
+          <button
+            onClick={handleInstall}
+            disabled={isInstalled}
+            className={`btn btn-lg mt-8 w-full md:w-auto px-10 transition-all ${
+              isInstalled
+                ? "btn-disabled bg-gray-300 text-gray-500"
+                : "btn-success text-white shadow-lg hover:scale-105"
+            }`}
+          >
+            {isInstalled ? "Installed" : `Install Now (${size})`}
           </button>
         </div>
       </div>

@@ -8,6 +8,7 @@ import axios from "axios";
 import AppsPage from "./Components/AppsPage/AppsPage.jsx";
 import AppsDetails from "./Components/AppsDetails/AppsDetails.jsx";
 import NotFound from "./Components/ErrorPages/NotFound.jsx";
+import { ToastContainer } from "react-toastify";
 
 const router = createBrowserRouter([
   {
@@ -52,5 +53,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
+     <ToastContainer />
   </StrictMode>,
 );
